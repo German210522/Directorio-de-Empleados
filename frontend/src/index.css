@@ -1,0 +1,12 @@
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  max-width: 600px;
+}

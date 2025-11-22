@@ -1,0 +1,150 @@
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  max-width: 600px;
+}
+
+h1 { text-align: center; color: #333; }
+
+/* --- Card Base --- */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-bottom: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* --- Formulario --- */
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem; color: #555; }
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.form-group input:focus { outline: 2px solid #007bff; border-color: transparent; }
+
+/* --- Botones Generales --- */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+}
+button:hover { background-color: #0056b3; }
+button:disabled { background-color: #ccc; cursor: not-allowed; }
+
+.btn-secondary {
+  background-color: #6c757d;
+  margin-right: 10px;
+}
+.btn-secondary:hover { background-color: #5a6268; }
+
+.form-actions { display: flex; justify-content: flex-end; }
+
+/* --- Tabs de Navegación --- */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+.tabs button {
+  background: none;
+  color: #666;
+  border: none;
+  padding: 8px 16px;
+  font-weight: 600;
+  border-radius: 20px;
+}
+.tabs button:hover { background-color: #e9ecef; color: #007bff; }
+.tabs button.active-tab {
+  background-color: #e7f1ff;
+  color: #007bff;
+}
+
+/* --- Buscador --- */
+.search-bar { margin-bottom: 20px; }
+.search-bar input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+}
+
+/* --- Tarjeta de Empleado --- */
+.employee-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 5px solid #007bff;
+}
+
+/* Estado visual cuando está inactivo */
+.employee-card.card-inactive {
+  border-left-color: #ccc;
+  background-color: #fafafa;
+}
+.employee-card.card-inactive h3, 
+.employee-card.card-inactive .role {
+  color: #999;
+}
+
+.card-info h3 { margin: 0; font-size: 1.1rem; color: #333; }
+.role { margin: 4px 0 8px 0; color: #666; font-size: 0.9rem; }
+
+/* Badge Interactivo */
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: auto;
+  transition: all 0.2s;
+}
+.status-badge.active { background-color: #d4edda; color: #155724; }
+.status-badge.active:hover { background-color: #c3e6cb; }
+
+.status-badge.inactive { background-color: #f8d7da; color: #721c24; }
+.status-badge.inactive:hover { background-color: #f5c6cb; }
+
+/* Botones de Acción (Iconos) */
+.card-actions { display: flex; gap: 8px; }
+.btn-icon {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+.btn-icon:hover { transform: scale(1.1); }
+.btn-icon.edit { background-color: #ffc107; color: #333; }
+.btn-icon.delete { background-color: #dc3545; color: white; }
+
+.empty-msg { text-align: center; color: #888; margin-top: 30px; }
