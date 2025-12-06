@@ -31,7 +31,7 @@ jobs:
         working-directory: ./frontend  # Entramos a tu carpeta
 
       - name: Build
-        run: npm run build
+        run: npx vite build
         working-directory: ./frontend  # Construimos dentro de tu carpeta
 
       - name: Upload artifact
